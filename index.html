@@ -19,8 +19,16 @@
       </div>
     </div>
     <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 jumbotron text-center">
+        <h3>Select a Test Subject ID number below to visualize the demographic information of that individual,<br>
+          as well as a bar chart with the top 10 bacterial species found in their navel,<br>
+          a bubble chart showing the bacteria cultures per sample,<br>
+          and a gauge chart that displays the weekly washing frequency.</h3>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-xs-2 col-sm-2 col-md-2">
-        <div class="well">
+        <div class="well" style="border:1px solid #000000;">
           <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
@@ -32,9 +40,9 @@
         </div>
       </div>
       <div class="col-xs-5 col-sm-5 col-md-5">
-        <div id="bar"></div>
+          <div id="bar"></div>
       </div>
-      <div class="col-xs-5 col-sm-5 col-md-5">
+      <div class="col-xs-5 col-sm-5 col-md-5"> 
         <div id="gauge"></div>
       </div>
     </div>

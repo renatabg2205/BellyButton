@@ -99,7 +99,8 @@ function buildCharts(sample) {
         tickvals: [0,1,2,3,4,5,6,7,8,9],
         ticktext: yticks
       },
-      autosize: true
+      autosize: true,
+      paper_bgcolor: "#EEEEEE"
     };
 
     var configBar = {responsive: true}
@@ -129,7 +130,8 @@ function buildCharts(sample) {
       yaxis: {automargin: true},
       //margin: { l: 80, r: 80, t:100, b: 80, pad:10},
       autosize: true,
-      hovermode: "closest"
+      hovermode: "closest",
+      paper_bgcolor: "#EEEEEE"
     };
     console.log(bubbleLayout);
 
@@ -174,7 +176,8 @@ function buildCharts(sample) {
 
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      autosize: true
+      autosize: true,
+      paper_bgcolor: "#EEEEEE"
     };
 
     var configGauge = {responsive: true}
