@@ -93,15 +93,19 @@ function buildCharts(sample) {
     }];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
+      title: "<b>Top 10 Bacteria Cultures Found</b>",
       yaxis: {
         tickmode: "array",
         tickvals: [0,1,2,3,4,5,6,7,8,9],
         ticktext: yticks
-      }
+      },
+      autosize: true
     };
+
+    var configBar = {responsive: true}
+
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("bar", barData, barLayout, configBar);
 
     //Bubble chart
     // 1. Create the trace for the bubble chart.
@@ -120,16 +124,19 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: 'Bacteria Cultures Per Sample',
+      title: "<b>Bacteria Cultures Per Sample</b>",
       xaxis: {title: "OTU ID", automargin: true},
       yaxis: {automargin: true},
-      margin: { l: 80, r: 80, t:100, b: 80, pad:10},
+      //margin: { l: 80, r: 80, t:100, b: 80, pad:10},
+      autosize: true,
       hovermode: "closest"
     };
     console.log(bubbleLayout);
 
+    var configBubble = {responsive: true}
+
     // 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout, configBubble);
 
     //Gauge chart
     // 1. Create a variable that filters the metadata array for the object with the desired sample number.
@@ -167,11 +174,13 @@ function buildCharts(sample) {
 
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 500, height: 300, margin: { t: 120, b: 0 }
+      autosize: true
     };
 
+    var configGauge = {responsive: true}
+
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout, configGauge);
 
   });
 }
